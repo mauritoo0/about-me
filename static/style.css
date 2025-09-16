@@ -24,16 +24,16 @@
         background: linear-gradient(to right, rgba(7, 37, 76), rgb(14, 5, 54));
         display: flex;
         flex-direction: row;
-        padding: 30px;
+        padding: clamp(15px, 2vw, 30px);
         box-sizing: border-box;
 
     }
 
-    .img-profile{
-        height: 45vh;
+    .img-profile {
+        height: clamp(150px, 45vh, 350px); 
+        width: auto;
+        object-fit: cover;
         border-radius: 50%;
-        
-
     }
 
     .header-details{
@@ -47,14 +47,14 @@
     }
 
     .header-details > h1, h3{
-    font-size: 2.5em;
+        font-size: clamp(2rem, 3vw, 3rem);
     
     }
 
     .header-details > p {
         font-weight: 400;
-        font-size: 1.2em;
-        width: 75%;
+        font-size: clamp(1rem, 1.6vw, 3rem);
+        width: 95%;
 
     }
 
@@ -73,40 +73,43 @@
         font-size: 1em;
     }
     .power-tools {
+        display: flex;
+        flex-direction: column;
         padding: 10px;
         background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
-        height: 200px;
+        min-height: clamp(200px, 20vh, 300px);
         
 
     }
 
-    .tools-icons{
+    .power-tools h1 {
+        flex: 1;
+        
+
+    }
+
+    .tools-icons {
         padding: 10px;
         display: flex;
+        flex: 2;
         flex-direction: row;
         justify-content: space-around;
-    }
+        max-width: 100%; 
+        overflow-x: hidden;
+}
 
-       
-    .tools-icons .tool-item i {
-        transition: transform 0.2s ease-in-out;
-        cursor: pointer;
-    }
-    .tools-icons .tool-item i:hover {
-        transform: scale(1.2) !important;
-    }
-
-
+    
     .tool-item {
         position: relative;
         display: inline-block;
-        margin: 10px;
+        justify-self: center;
+        
     }
     .tools-icons .tool-item i {
-    display: inline-block;       
-    font-size: 8em;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
+        display: inline-block;       
+        font-size: clamp(2.5rem, 5vw, 5em);
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
     }
 
     .tools-icons .tool-item i:hover {
@@ -121,13 +124,14 @@
     .tool-span{
         padding: 10px;
         background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
-        height: 0; 
+         max-height: 0;
         overflow: hidden;
-        transition: height 0.5s ease;
+        transition: max-height 0.5s ease-in-out;
+        box-sizing: border-box;
         
     }
     .tool-span.show {
-        height: 200px; 
+        max-height: clamp(180px, 25vh, 220px);
         box-sizing: border-box;
 
     }
@@ -135,7 +139,7 @@
     .span-text{
         color: white;
         margin-top: 20px;
-        font-size: 1.4rem;
+        font-size: clamp(1rem, 1.5vw, 1.4rem);
     }
 
 
@@ -143,7 +147,7 @@
         display: flex;
         padding: 10px;
         background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
-        height: 300px;
+        min-height: 300px;
         flex-direction: column;
         box-sizing: border-box;
 
@@ -156,6 +160,8 @@
         flex-direction: row;
         flex: 1;
         justify-content: space-around;
+        max-width: 100%;
+        overflow-x: hidden;
         
     }
 
@@ -174,8 +180,7 @@
     }
 
     .project img{
-        min-height: 135px;
-        max-height: 140px;
+        height: clamp(75px, 20vw, 140px);
         transition: transform 0.2s ease-in-out;
         cursor: pointer;
         
@@ -188,22 +193,23 @@
 
 
     .lab-span{
-        height: 0; 
+        max-height: 0;
         overflow: hidden;
-        transition: height 0.5s ease;
+        transition: max-height 0.5s ease-in-out;
         background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
+        box-sizing: border-box;
 
         
     }
     .lab-span.show {
-        height: 250px; 
+        max-height: clamp(300px, 40vh, 600px); 
         text-decoration: none;
         color: inherit;
     }
 
     .lab-text{
         color: white;
-        padding: 0 1.2rem;
+        padding: 1rem;
         margin-top: 20px;
         font-size: 1.4rem;
         
@@ -219,7 +225,14 @@
     .contact{
         padding: 10px;
         background: linear-gradient(to right, rgba(34, 77, 143), rgb(14, 5, 54));
-        height: 200px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .contact h1{
+        flex: 1;
     }
 
     .contact-icons{
@@ -227,6 +240,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        flex: 3;
+        align-items: center;
     }
 
     .contact-icons a{
@@ -235,7 +250,7 @@
     }
 
     .contact-icons i{
-        font-size: 8em;
+        font-size: clamp(2.5rem, 6vw, 6em);
         cursor: pointer;
         user-select: none
         
@@ -250,7 +265,7 @@
     .correo{
         display: flex;
         align-items: center;
-        font-size: 2em;
+        font-size: clamp(1rem, 2vw, 2em);
         font-weight: bold;
         
     }
@@ -272,7 +287,7 @@
         align-items: center;
         text-decoration: none;
         color: rgb(236, 238, 228);
-        font-size: 2em;
+        font-size: clamp(1rem, 2vw, 2em);
         font-weight: bold;
         text-decoration: none;
     }
@@ -310,7 +325,7 @@
         flex-direction: row;
         align-items: start;
         justify-content: end;
-        padding: 20px;
+        padding: clamp(15px, 2vw, 30px);
         box-sizing: border-box;
 
     }
@@ -324,11 +339,11 @@
     }
 
     .img-profile{
-       transform: scaleX(-1);
-       height: 25vh;
-       border-radius: 50%;
-       object-fit: cover;
-       align-self: start}
+       height: clamp(150px, 25vh, 350px); 
+        width: auto;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 
 
     .linkedin{
@@ -349,7 +364,7 @@
     .power-tools {
         padding: 10px;
         background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
-        height: 250px;
+        min-height: clamp(200px, 20vh, 300px);
         box-sizing: border-box;
       
     }
@@ -361,6 +376,8 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 32px 40px;
+        max-width: 100%;
+        overflow-x: hidden;
         
     }
 
@@ -374,7 +391,7 @@
         margin-bottom: 0;
     }
     .tools-icons .tool-item i {
-        font-size: 4em;
+        font-size: clamp(2.5rem, 5vw, 5em);
         transition: transform 0.2s ease-in-out;
         cursor: pointer;
     }
@@ -391,14 +408,14 @@
 }
 
     .tool-span.show {
-        max-height: 200px; 
+        max-height: clamp(180px, 25vh, 220px);
     }
 
     
     .span-text{
         color: white;
         margin-top: 20px;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 1.5vw, 1.4rem);
         padding: 1rem;
     }
 
@@ -406,7 +423,7 @@
         display: flex;
         padding: 10px;
         background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
-        height: 250px;
+        height: clamp(200px, 35vw, 300px);
         flex-direction: column;
         box-sizing: border-box;
 
@@ -422,7 +439,7 @@
     }
 
     .lab-span.show {
-        max-height: 600px; 
+        max-height: clamp(300px, 30vh, 600px);
         text-decoration: none;
         
     }
@@ -448,6 +465,8 @@
         flex-direction: row;
         flex: 1;
         justify-content: space-around;
+        max-width: 100%;
+        overflow-x: hidden;
         
     }
 
@@ -466,8 +485,7 @@
     }
 
     .project img{
-        min-height: 75px;
-        max-height: 100px;
+        height: clamp(75px, 13vw, 140px);
         
     }
 
@@ -486,8 +504,15 @@
     .contact{
         padding: 10px;
         background: linear-gradient(to right, rgba(34, 77, 143), rgb(14, 5, 54));
-        height: 200px;
+        height: clamp(200px, 30vw, 300px);
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .contact h1{
+        flex: 1;
     }
 
     .contact-icons{
@@ -495,6 +520,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        flex: 3;
+        align-items: center;
     }
 
     .contact-icons a{
@@ -503,7 +530,7 @@
     }
 
     .contact-icons i{
-        font-size: 6em;
+        font-size: clamp(3rem, 10vw, 10em);
         cursor: pointer;
         
     }
@@ -516,7 +543,7 @@
     .correo{
         display: flex;
         align-items: center;
-        font-size: 2em;
+        font-size: clamp(1rem, 2vw, 2em);
         font-weight: bold;
         
     }
@@ -537,7 +564,7 @@
         align-items: center;
         text-decoration: none;
         color: rgb(236, 238, 228);
-        font-size: 2em;
+        font-size: clamp(1rem, 2vw, 2em);
         font-weight: bold;
         text-decoration: none;
     }
@@ -576,17 +603,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: clamp(15px, 2vw, 30px);
         box-sizing: border-box;
 
     }
 
     .img-profile {
-       transform: scaleX(-1);
-       height: 25vh;
-       border-radius: 50%;
-       object-fit: cover;
-       align-self: center}
+       height: clamp(150px, 25vh, 350px); 
+        width: auto;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 
     .header-details{
         display:flex; 
@@ -605,7 +632,7 @@
     .power-tools {
         padding: 10px;
         background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
-        height: auto;
+        min-height: clamp(200px, 20vh, 300px);
         box-sizing: border-box;
       
     }
@@ -617,6 +644,8 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 32px 40px;
+        max-width: 100%;
+        overflow-x: hidden;
         
     }
 
@@ -641,21 +670,21 @@
     }
 
     .tool-span {
-    background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-    box-sizing: border-box;
+        background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        box-sizing: border-box;
 }
 
     .tool-span.show {
-    max-height: 200px; 
+        max-height: clamp(180px, 25vh, 220px); 
     }
 
     .span-text{
         color: white;
         margin-top: 20px;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 1.5vw, 1.4rem);
         padding: 1rem;
     }
 
@@ -678,6 +707,8 @@
         justify-content: space-around;
         flex-wrap: wrap;
         gap: 20px 30px;
+        max-width: 100%;
+        overflow-x: hidden;
         
     }
 
@@ -696,8 +727,7 @@
     }   
 
     .project img{
-        min-height: 75px;
-        max-height: 100px;
+        height: clamp(75px, 20vw, 140px);
         transition: transform 0.2s ease-in-out;
         cursor: pointer;
         
@@ -717,7 +747,7 @@
     }
 
     .lab-span.show {
-        max-height: 600px; 
+        max-height: clamp(300px, 80vh, 600px);
         text-decoration: none;
         
     }
@@ -741,12 +771,13 @@
         flex-direction: column;
         padding: 10px;
         background: linear-gradient(to right, rgba(34, 77, 143), rgb(14, 5, 54));
-        height: 200px;
+        min-height: 200px;
         box-sizing: border-box;
+        
         
     }
 
-    .contacto h1{
+    .contact h1{
         flex: 1;
     }
 
@@ -771,7 +802,7 @@
    }    
 
     .contact-icons i{
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 4vw, 6em);
         cursor: pointer;
         
     }   
@@ -779,7 +810,7 @@
     .correo{
         display: flex;
         align-items: center;
-        font-size: 1rem;
+        font-size: clamp(1rem, 2vw, 2em);
         font-weight: bold;
         
     }   
@@ -800,7 +831,7 @@
         align-items: center;
         text-decoration: none;
         color: rgb(236, 238, 228);
-        font-size: 1rem;
+        font-size: clamp(1rem, 2vw, 2em);
         font-weight: bold;
         text-decoration: none;
     }
