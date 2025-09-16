@@ -27,33 +27,45 @@ const lab_details = document.querySelector('.lab-span');
 const lab_text = document.querySelector('.lab-text');
 const project_icon = document.querySelectorAll('.project');
 
+function scrollToElement(el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+}
+
+// Tools
 tool_icons.forEach(icon => {
     icon.addEventListener('click', () => {
         const i_element = icon.querySelector('i');
         const id = i_element.id;
-        
-        if(span_text.textContent === toolDescriptions[id] && span_details.classList.contains('show')){
-            // ocultar con animación
+
+        const isOpen = (span_text.textContent === toolDescriptions[id] && span_details.classList.contains('show'));
+
+        if(isOpen){
             span_details.classList.remove('show');
         } else {
             span_text.textContent = toolDescriptions[id];
             span_details.classList.add('show');
+
+            setTimeout(() => scrollToElement(span_details), 100);
         }
     });
-    
 });
 
+// Labs / Projects
 project_icon.forEach(icon => {
     icon.addEventListener('click', () => {
         const img_element = icon.querySelector('img');
         const id = img_element.id;
-        
-        if(lab_text.innerHTML === labDescriptions[id] && lab_details.classList.contains('show')){
+
+        const isOpen = (lab_text.innerHTML === labDescriptions[id] && lab_details.classList.contains('show'));
+
+        if(isOpen){
             lab_details.classList.remove('show');
         } else {
-           lab_text.innerHTML  = labDescriptions[id];
+            lab_text.innerHTML = labDescriptions[id];
             lab_details.classList.add('show');
+
+            setTimeout(() => scrollToElement(lab_details), 100);
         }
     });
-    
 });
