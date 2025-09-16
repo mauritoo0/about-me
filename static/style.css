@@ -1,0 +1,808 @@
+* {
+   margin: 0;
+   padding: 0;
+   user-select: none
+}
+
+/* -------------------------
+   Responsive: PC (1024px)
+   ------------------------- */
+@media (min-width: 1025px) {
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%; 
+        color: rgb(236, 238, 228);
+        font-family: "Encode Sans Condensed", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        box-sizing: border-box;
+    }
+
+    .header-profile{
+        background: linear-gradient(to right, rgba(7, 37, 76), rgb(14, 5, 54));
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        box-sizing: border-box;
+
+    }
+
+    .img-profile{
+        height: 45vh;
+        border-radius: 50%;
+        
+
+    }
+
+    .header-details{
+        display:flex; 
+        flex-direction: column;
+        padding: 30px;
+        box-sizing: border-box;
+
+        
+    
+    }
+
+    .header-details > h1, h3{
+    font-size: 2.5em;
+    
+    }
+
+    .header-details > p {
+        font-weight: 400;
+        font-size: 1.2em;
+        width: 75%;
+
+    }
+
+    .about-me{
+        margin-top: 60px;
+    }
+
+    .linkedin{
+        text-decoration:underline;
+        color: rgb(236, 238, 228)
+        
+    }
+
+    .address{
+        font-weight: 400;
+        font-size: 1em;
+    }
+    .power-tools {
+        padding: 10px;
+        background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
+        height: 200px;
+        
+
+    }
+
+    .tools-icons{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+       
+    .tools-icons .tool-item i {
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    .tools-icons .tool-item i:hover {
+        transform: scale(1.2) !important;
+    }
+
+
+    .tool-item {
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+    }
+    .tools-icons .tool-item i {
+    display: inline-block;       
+    font-size: 8em;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    }
+
+    .tools-icons .tool-item i:hover {
+        transform: scale(1.2);
+    }
+
+
+    #dj, #djr{
+        filter: drop-shadow(2px 2px 5px rgba(233, 232, 232, 0.5));
+    }
+
+    .tool-span{
+        padding: 10px;
+        background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
+        height: 0; 
+        overflow: hidden;
+        transition: height 0.5s ease;
+        
+    }
+    .tool-span.show {
+        height: 200px; 
+        box-sizing: border-box;
+
+    }
+
+    .span-text{
+        color: white;
+        margin-top: 20px;
+        font-size: 1.4rem;
+    }
+
+
+    .lab {
+        display: flex;
+        padding: 10px;
+        background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
+        height: 300px;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        
+    }
+
+    .projects{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-around;
+        
+    }
+
+    .project{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        
+        
+    }
+
+    .project-title{
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .project img{
+        min-height: 135px;
+        max-height: 140px;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+        
+    }
+
+    .project img:hover{
+        transform: scale(1.2);
+        
+    }
+
+
+    .lab-span{
+        height: 0; 
+        overflow: hidden;
+        transition: height 0.5s ease;
+        background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
+
+        
+    }
+    .lab-span.show {
+        height: 250px; 
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .lab-text{
+        color: white;
+        padding: 0 1.2rem;
+        margin-top: 20px;
+        font-size: 1.4rem;
+        
+    }
+
+    .lab-text a{
+        color: inherit;
+        text-decoration: underline;
+    }
+
+
+
+    .contact{
+        padding: 10px;
+        background: linear-gradient(to right, rgba(34, 77, 143), rgb(14, 5, 54));
+        height: 200px;
+    }
+
+    .contact-icons{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contact-icons a{
+        text-decoration: none;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .contact-icons i{
+        font-size: 8em;
+        cursor: pointer;
+        user-select: none
+        
+    
+    }
+
+    .contact-icons a:hover{
+        transform: scale(1.2);
+    
+    }
+
+    .correo{
+        display: flex;
+        align-items: center;
+        font-size: 2em;
+        font-weight: bold;
+        
+    }
+
+    .correo a{
+        text-decoration: none;
+        color: rgb(236, 238, 228);
+    }
+
+
+    .cv {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .cv a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(236, 238, 228);
+        font-size: 2em;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+}
+
+/* -------------------------
+   Responsive: Tablet (768px - 1020px)
+------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    html, body {
+    
+    background: linear-gradient(to right, rgba(7, 37, 76), rgb(14, 5, 54));
+    }
+
+    body {
+    min-height: 100vh;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%; 
+        color: rgb(236, 238, 228);
+        font-family: "Encode Sans Condensed", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        box-sizing: border-box;
+    }
+
+    .header-profile{
+        background: linear-gradient(to right, rgba(7, 37, 76), rgb(14, 5, 54));
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: end;
+        padding: 20px;
+        box-sizing: border-box;
+
+    }
+    .header-details{
+        display:flex; 
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+
+    
+    }
+
+    .img-profile{
+       transform: scaleX(-1);
+       height: 25vh;
+       border-radius: 50%;
+       object-fit: cover;
+       align-self: start}
+
+
+    .linkedin{
+        text-decoration:underline;
+        color: rgb(236, 238, 228)
+        
+    }
+
+    .about-me{
+        margin-top: 30px;
+    }
+
+    .address{
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+    .power-tools {
+        padding: 10px;
+        background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
+        height: 250px;
+        box-sizing: border-box;
+      
+    }
+
+    .tools-icons{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 32px 40px;
+        
+    }
+
+    .tool-item {
+        flex: 0 1 15%; 
+        max-width: 120px;
+        min-width: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .tools-icons .tool-item i {
+        font-size: 4em;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    .tools-icons .tool-item i:hover {
+        transform: scale(1.2);
+    }
+
+    .tool-span {
+    background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    box-sizing: border-box;
+}
+
+    .tool-span.show {
+        max-height: 200px; 
+    }
+
+    
+    .span-text{
+        color: white;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .lab {
+        display: flex;
+        padding: 10px;
+        background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
+        height: 250px;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        
+    }
+
+    .lab-span{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
+        box-sizing: border-box;
+    }
+
+    .lab-span.show {
+        max-height: 600px; 
+        text-decoration: none;
+        
+    }
+    
+
+    .lab-text{
+        color: white;
+        padding: 1rem;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        
+    }
+
+    .lab-text a{
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    
+    .projects{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-around;
+        
+    }
+
+    .project{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        
+        
+    }
+
+    .project-title{
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .project img{
+        min-height: 75px;
+        max-height: 100px;
+        
+    }
+
+    .project img{
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+        
+    }
+
+    .project img:hover{
+        transform: scale(1.2);
+        
+    }
+
+    
+    .contact{
+        padding: 10px;
+        background: linear-gradient(to right, rgba(34, 77, 143), rgb(14, 5, 54));
+        height: 200px;
+        box-sizing: border-box;
+    }
+
+    .contact-icons{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contact-icons a{
+        text-decoration: none;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .contact-icons i{
+        font-size: 6em;
+        cursor: pointer;
+        
+    }
+
+    .contact-icons a:hover{
+        transform: scale(1.2);
+    
+    }
+
+    .correo{
+        display: flex;
+        align-items: center;
+        font-size: 2em;
+        font-weight: bold;
+        
+    }
+
+    .correo a{
+        text-decoration: none;
+        color: rgb(236, 238, 228);
+    }
+
+    .cv {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .cv a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(236, 238, 228);
+        font-size: 2em;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+}
+
+/* -------------------------
+   Responsive: Mobile ( max-width: 767px)
+------------------------- */
+@media (max-width: 767px) {
+    html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    * {
+    box-sizing: inherit;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%; 
+        color: rgb(236, 238, 228);
+        font-family: "Encode Sans Condensed", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        box-sizing: border-box;
+    }
+
+    .header-profile{
+        background: linear-gradient(to right, rgba(7, 37, 76), rgb(14, 5, 54));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+
+    }
+
+    .img-profile {
+       transform: scaleX(-1);
+       height: 25vh;
+       border-radius: 50%;
+       object-fit: cover;
+       align-self: center}
+
+    .header-details{
+        display:flex; 
+        flex-direction: column;
+        align-items: left;
+        padding: 10px;
+        box-sizing: border-box;
+        gap: 7px;}
+
+    .linkedin   {
+        text-decoration:underline;
+        color: rgb(236, 238, 228)
+        
+    }
+    
+    .power-tools {
+        padding: 10px;
+        background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
+        height: auto;
+        box-sizing: border-box;
+      
+    }
+
+    .tools-icons{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 32px 40px;
+        
+    }
+
+    .tool-item {
+        flex: 0 1 20%; 
+        max-width: 100px;
+        min-width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    
+    .tool-item i {
+        font-size: 4em;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+    }   
+        
+    .tool-item i:hover {
+        transform: scale(1.2);
+    }
+
+    .tool-span {
+    background: linear-gradient(to right, rgba(13, 53, 105), rgb(14, 5, 54));
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    box-sizing: border-box;
+}
+
+    .tool-span.show {
+    max-height: 200px; 
+    }
+
+    .span-text{
+        color: white;
+        margin-top: 20px;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    .lab {
+        display: flex;
+        padding: 10px;
+        background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
+        height: auto;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        
+    }
+
+    .projects{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px 30px;
+        
+    }
+
+    .project{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        
+        
+    }   
+
+    .project-title{
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }   
+
+    .project img{
+        min-height: 75px;
+        max-height: 100px;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+        
+    }
+
+    .project img:hover{
+        transform: scale(1.2);
+        
+    }
+
+    .lab-span{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        background: linear-gradient(to right, rgba(4, 20, 41), rgb(14, 5, 54));
+        box-sizing: border-box;
+    }
+
+    .lab-span.show {
+        max-height: 600px; 
+        text-decoration: none;
+        
+    }
+
+    .lab-text{
+        color: white;
+        padding: 1rem;
+        margin-top: 20px;
+        font-size: 1.2rem;
+         
+        
+    }    
+
+    .lab-text a{
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background: linear-gradient(to right, rgba(34, 77, 143), rgb(14, 5, 54));
+        height: 200px;
+        box-sizing: border-box;
+        
+    }
+
+    .contacto h1{
+        flex: 1;
+    }
+
+    .contact-icons{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex: 3;
+        align-items: center;    
+        
+    }
+    
+    .contact-icons a{
+        text-decoration: none;
+        transition: transform 0.2s ease-in-out;
+        ;
+    }
+
+   .contact-icons a:hover{
+       transform: scale(1.2);
+   }    
+
+    .contact-icons i{
+        font-size: 3rem;
+        cursor: pointer;
+        
+    }   
+
+    .correo{
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+        
+    }   
+
+    .correo a{
+        text-decoration: none;
+        color: rgb(236, 238, 228);
+    }   
+
+    .cv {
+        display: flex;
+        align-items: center;
+
+    }   
+
+    .cv a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(236, 238, 228);
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+}
